@@ -4,4 +4,7 @@ app:
   image: hossam23/demo-app:v5
   replicaCount: 2
 
-
+### SERVICE
+svc:
+  type: NodePort
+  port: 8080
