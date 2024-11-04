@@ -1,0 +1,7 @@
+# Application values
+app:
+  name: nginx-app
+  image: hossam23/demo-app:v5
+  replicaCount: 2
+
+
