@@ -3,6 +3,11 @@ app:
   name: nginx-app
   image: hossam23/demo-app:v5
   replicaCount: 2
+req:
+  cpu: 1
+  mem: 512Mi
+  cpu: 2
+  mem: 1000Mi
 
 ### SERVICE
 svc:

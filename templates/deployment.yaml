@@ -18,4 +18,12 @@ spec:
           ports:
             - containerPort: 80
               name: {{ .Values.app.name }}
+      resources:
+        requests:
+          cpu: {{ .Values.req.cpu }}
+          memory: {{ .Values.req.mem }}
+        limits:
+          cpu: {{ .Values.limit.cpu }}
+          memory: {{ .Values.limit.cpu }}
+               
 
