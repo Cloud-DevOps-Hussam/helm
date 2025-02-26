@@ -2,14 +2,14 @@
 app:
   name: nginx-app
   image: hossam23/demo-app:v5
-  replicaCount: 2
+  replicaCount: 1
 req:
-  cpu: "100m"
-  mem: "200Mi"
-  cpu: "500m"
-  mem: "500Mi"
-
+  cpu: "50m"
+  mem: "50Mi"  
+limit:
+  cpu: "80m"
+  mem: "80Mi"  
 ### SERVICE
 svc:
-  type: NodePort
-  port: 8080
+  type: ClusterIP
+  port: 80

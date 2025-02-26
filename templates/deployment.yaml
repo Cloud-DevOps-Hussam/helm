@@ -17,13 +17,11 @@ spec:
           image: {{ .Values.app.image }}
           ports:
             - containerPort: 80
-              name: {{ .Values.app.name }}
-      resources:
-        requests:
-          cpu: {{ .Values.req.cpu }}
-          memory: {{ .Values.req.mem }}
-        limits:
-          cpu: {{ .Values.limit.cpu }}
-          memory: {{ .Values.limit.cpu }}
-               
-
+              name: http  # Optional: Provide a meaningful name for the port
+          resources:  # Correctly nested under the container
+            requests:
+              cpu: {{ .Values.req.cpu }}
+              memory: {{ .Values.req.mem }}
+            limits:
+              cpu: {{ .Values.limit.cpu }}
+              memory: {{ .Values.limit.mem }}
